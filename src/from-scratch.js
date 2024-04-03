@@ -21,9 +21,9 @@ const happyBirthdayPet = (breed, age) => {
     console.log("Arf arf!")
   } else if (breed === "dog" && age >= 5 && age < 10) {
     console.log("Woof woof!")
-  } else if (breed === "dog" && age > 10) {
-    console.log("Woof woof!")
-  } else console.log("Happy Birthday!")
+  } else if (breed === "dog" && age >= 10) {
+    console.log("Boof!")
+  } else console.log("Happy birthday!")
 };
 
 const funTypes = () => {
