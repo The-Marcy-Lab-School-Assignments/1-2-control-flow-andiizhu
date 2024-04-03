@@ -26,15 +26,44 @@ const happyBirthdayPet = (breed, age) => {
   } else console.log("Happy birthday!")
 };
 
-const funTypes = () => {
+const funTypes = (jsType) => {
+  if (typeof(jsType) === "string") {
+    console.log("That's just some text.")
+  } else if (typeof(jsType) === "number") {
+    console.log("That's a good number.")
+  } else if (typeof(jsType) === "boolean") {
+    console.log("To bool, or not to bool?")
+  } else if (typeof(jsType) === "undefined") {
+    console.log("Nothing, but I didn't set that.")
+  } else if (typeof(jsType) === "null") {
+    console.log("Nothing, and I did set that.")
+  } else if (typeof(jsType) === "object") {
+    console.log("Anybody got the key?")
+  } else if (typeof(jsType) === "array") {
+    console.log("I order you to be indexed.")
+  } else if (typeof(jsType) === "NaN"){
+    console.log("Well, now you're just showing off.")
+  }
 };
 
-const rounder = () => {
+// funTypes(null)
+// funTypes()
+
+const rounder = (float, roundingSetting) => {
+  
 };
 
-const fizzBuzzish = () => {
+const fizzBuzzish = (num) => {
+  if (num % 3 === 0 && num % 5 === 0){
+    return console.log("fizzBuzz!")
+  } else if (num % 5 === 0) {
+    return console.log("buzz")
+  } else if (num % 3 === 0){
+    return console.log("fizz")
+  } else return console.log(num)
 };
 
+fizzBuzzish(2)
 module.exports = {
   measureRain,
   happyBirthdayPet,
