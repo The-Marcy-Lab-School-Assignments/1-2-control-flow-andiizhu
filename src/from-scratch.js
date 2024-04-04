@@ -55,7 +55,11 @@ funTypes([1,2])
 funTypes(NaN)
 
 const rounder = (float, roundingSetting) => {
-  
+if (roundingSetting === "up"){
+    return Math.ceil(float)
+  } else if (roundingSetting === "down"){
+    return Math.floor(float)
+  } else return Math.round(float)
 };
 
 const fizzBuzzish = (num) => {
