@@ -27,27 +27,32 @@ const happyBirthdayPet = (breed, age) => {
 };
 
 const funTypes = (jsType) => {
-  if (typeof(jsType) === "string") {
+  if (typeof jsType === "string") {
     console.log("That's just some text.")
-  } else if (typeof(jsType) === "number") {
-    console.log("That's a good number.")
-  } else if (typeof(jsType) === "boolean") {
-    console.log("To bool, or not to bool?")
+  } else if (jsType === null) {
+    console.log("Nothing, and I did set that.")
   } else if (typeof(jsType) === "undefined") {
     console.log("Nothing, but I didn't set that.")
-  } else if (typeof(jsType) === "null") {
-    console.log("Nothing, and I did set that.")
   } else if (typeof(jsType) === "object") {
-    console.log("Anybody got the key?")
-  } else if (typeof(jsType) === "array") {
-    console.log("I order you to be indexed.")
-  } else if (typeof(jsType) === "NaN"){
+    if (Array.isArray(jsType) === true) {
+      console.log("I order you to be indexed.")
+    } else return console.log("Anybody got the key?") 
+  } else if (isNaN(jsType) === true){
     console.log("Well, now you're just showing off.")
-  }
-};
-
-// funTypes(null)
-// funTypes()
+  } else if (typeof jsType === "number") {
+    console.log("That's a good number.")
+  }  else if (typeof jsType === "boolean") {
+    console.log("To bool, or not to bool?")
+  } 
+}
+funTypes("Happy")
+funTypes(12)
+funTypes(true)
+funTypes()
+funTypes(null)
+funTypes({})
+funTypes([1,2])
+funTypes(NaN)
 
 const rounder = (float, roundingSetting) => {
   
@@ -63,7 +68,7 @@ const fizzBuzzish = (num) => {
   } else return console.log(num)
 };
 
-fizzBuzzish(2)
+
 module.exports = {
   measureRain,
   happyBirthdayPet,
