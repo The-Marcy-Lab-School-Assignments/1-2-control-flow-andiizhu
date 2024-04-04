@@ -1,4 +1,5 @@
-const measureRainSwitch = () => {
+const measureRainSwitch = (inches) => {
+  switch()
 };
 
 const rounderSwitch = () => {
